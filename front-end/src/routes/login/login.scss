@@ -2,8 +2,8 @@
   height: 100vh;
   background: linear-gradient(
     135deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
+      rgb(53, 41, 129) 0%,
+    rgb(109, 9, 113) 100%
   );
 
   .login-container {
@@ -77,10 +77,11 @@
     border-radius: 25px;
     cursor: pointer;
     background: linear-gradient(
-      135deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
-    );
+    135deg,
+      rgb(53, 41, 129) 0%,
+    rgb(109, 9, 113) 100%
+  );
+
   }
   .forgot-password {
     float: right;

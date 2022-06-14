@@ -1,45 +1,29 @@
-import React, { Component } from "react";
+import React from "react";
 import "./login.scss";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import { useState } from "react";
 
-class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: "",
-      showPassword: false,
-    };
-  }
+function Login(){
 
-  handleOnChangeUserName = (e) => {
-    this.setState({
-      username: e.target.value,
-    });
-  };
+    const[username,setUsername] = useState("");
+    const[password,setPassword] = useState("");
+    const[showPassword, setShowPassword] = useState(false);
 
-  handleOnChangePassword = (e) => {
-    this.setState({
-      password: e.target.value,
-    });
-  };
+    const handleLogin = (e) => {
+        e.preventDefault();
+        alert("Login!");
+    }
 
-  handleShowHidePassword = () => {
-    this.setState({
-      showPassword: !this.state.showPassword,
-    });
-    console.log(this.state.showPassword);
-  };
-  handleLogin = () => {
-    alert("login");
-  };
+    
+   const handleShowHidePassword = () => {
+      setShowPassword(!showPassword);
+   };
 
-  render() {
     return (
-      <div className="login-background">
+        <div className="login-background">
         <div className="login-container">
           <div className="login-content row">
             <div className="col-12 text-center login-title">Login</div>
@@ -49,22 +33,22 @@ class Login extends Component {
                 type="text"
                 className="form-control login-input"
                 placeholder="Enter your user name"
-                value={this.state.username}
-                onChange={(e) => this.handleOnChangeUserName(e)}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="col-12 form-group">
               <label>Password: </label>
               <div className="login-password">
                 <input
-                  type={this.state.showPassword ? "text" : "password"}
+                  type={showPassword ? "text" : "password"}
                   className="form-control login-input"
                   placeholder="Enter your password"
-                  value={this.state.password}
-                  onChange={(e) => this.handleOnChangePassword(e)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
-                <span onClick={() => this.handleShowHidePassword()}>
-                  {this.state.showPassword ? (
+                <span onClick={handleShowHidePassword}>
+                  {showPassword ? (
                     <VisibilityIcon className="show-password" />
                   ) : (
                     <VisibilityOffIcon className="show-password" />
@@ -72,16 +56,13 @@ class Login extends Component {
                 </span>
               </div>
             </div>
-            <div className="col-12" style={{ color: "red" }}>
-              {this.state.errMessage}
-            </div>
             <div className="col-12">
-              <button className="btn-login" onClick={() => this.handleLogin()}>
+              <button className="btn-login" onClick={handleLogin}>
                 Login
               </button>
             </div>
             <div className="col-12">
-              <span className="forgot-password">Forgot your password?</span>
+              <a href="/" className="forgot-password">Forgot your password?</a>
             </div>
             <div className="col-12 text-center login-with mt-3">
               <span className="">Or login with:</span>
@@ -93,8 +74,7 @@ class Login extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+    )
 }
 
 export default Login;
