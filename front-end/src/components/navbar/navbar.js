@@ -3,7 +3,9 @@ import "./navbar.scss";
 
 const NavbarContainer = () => {
   return (
-    <div>navbar</div>
+    <div className="navbar__container">
+      <h1>Navbar</h1>
+    </div>
   )
 }
 

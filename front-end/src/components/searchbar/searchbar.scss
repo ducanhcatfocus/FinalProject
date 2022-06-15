@@ -1,0 +1,50 @@
+.searchbar__container {
+    position: sticky;
+    top:0;
+    width: 100%;
+    background: gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+
+    .search__container {
+        flex:1;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+    
+        .searchbarinput__container {
+            width: 60%;
+            align-items: center;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+
+            .searchbar__input{
+                flex:1;
+                outline: none;
+                border:none;
+    
+            }
+        
+            .searchbar__input:focus{
+                outline: none;
+            }
+    
+            button {
+                border: none;
+                background-color: transparent;
+                padding-top:2.5px;
+            }
+        }
+
+       
+    }
+
+    .usersetting__container {
+        display: flex;
+        align-items: center;
+    }
+}   

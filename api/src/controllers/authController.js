@@ -32,7 +32,7 @@ const register = async (req, res) => {
       data: {
         user: user,
       },
-    });
+    });c
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
