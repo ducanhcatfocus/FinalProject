@@ -1,1 +1,23 @@
+.navbar__container {
+    display:flex;
+    flex:1;
+    justify-content: space-evenly;
 
+    .icon___container{
+        position: relative;
+
+
+        p {
+            color: white;
+            position: absolute;
+            top:0;
+            left:100%;
+        }
+    }
+    
+}
+
+
+.activated {
+    color:black!important;
+}

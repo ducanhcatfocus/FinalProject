@@ -8,40 +8,50 @@
     align-items: center;
     padding:5px;
 
-    .search__container {
-        flex:1;
+    .logosearchbar__container{
         display: flex;
-        text-align: center;
         justify-content: space-between;
-    
-        .searchbarinput__container {
-            width: 60%;
-            align-items: center;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            padding: 5px;
+        align-items: center;
 
-            .searchbar__input{
-                flex:1;
-                outline: none;
-                border:none;
-    
-            }
+        .logo__container {
+            margin-right: 5px;
+        }
+        .search__container {
+            flex:1;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+
         
-            .searchbar__input:focus{
-                outline: none;
-            }
+            .searchbarinput__container {
+                align-items: center;
+                background-color: white;
+                display: flex;
+                justify-content: space-between;
+                height: max-content;
+                padding: 5px;
+                border-radius: 10px;
     
-            button {
-                border: none;
-                background-color: transparent;
-                padding-top:2.5px;
+                .searchbar__input{
+                    flex:1;
+                    outline: none;
+                    border:none;
+        
+                }
+            
+                .searchbar__input:focus{
+                    outline: none;
+                }
+        
+                button {
+                    border: none;
+                    background-color: transparent;
+                }
             }
         }
-
-       
     }
+       
+    
 
     .usersetting__container {
         display: flex;
