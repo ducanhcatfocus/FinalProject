@@ -6,8 +6,7 @@ import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SendIcon from '@mui/icons-material/Send';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
-import SendContainer from './send';
-import  PostAddContainer from './postadd';
+import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 
 const NavbarContainer = () => {
@@ -17,27 +16,39 @@ const NavbarContainer = () => {
   return (
     <div className="navbar__container">
       <div className="icon___container">
-        <PostAddIcon sx={{ fontSize: 40 }} style={{color: active === "post" ? "black" : "white"}} onClick={() => setActive("post")}/>
+        <IconButton>
+          <PostAddIcon sx={{ fontSize: 45 }} style={{color: active === "post" ? "black" : "white"}} onClick={() => setActive("post")}/>
+        </IconButton>
         <p>0</p>
       </div>
       <div className="icon___container">
-        <ArticleIcon sx={{ fontSize: 40 }} style={{color: active === "article" ? "black" : "white"}} onClick={() => setActive("article")}/>
+        <IconButton>
+          <ArticleIcon sx={{ fontSize: 45 }} style={{color: active === "article" ? "black" : "white"}} onClick={() => setActive("article")}/>
+        </IconButton>
         <p>0</p>
       </div>
       <div className="icon___container">
-        <SendIcon sx={{ fontSize: 40 }} style={{color: active === "send" ? "black" : "white"}} onClick={() => setActive("send")}/>
+        <IconButton>
+          <SendIcon sx={{ fontSize: 45 }} style={{color: active === "send" ? "black" : "white"}} onClick={() => setActive("send")}/>
+        </IconButton>
         <p>0</p>
       </div>
       <div className="icon___container">
-        <BookmarkIcon sx={{ fontSize: 40 }} style={{color: active === "bookmark" ? "black" : "white"}} onClick={() => setActive("bookmark")}/>
+        <IconButton>
+          <BookmarkIcon sx={{ fontSize: 45 }} style={{color: active === "bookmark" ? "black" : "white"}} onClick={() => setActive("bookmark")}/>
+        </IconButton>
         <p>0</p>
       </div>
       <div className="icon___container">
-        <PendingActionsIcon sx={{ fontSize: 40 }} style={{color: active === "pending" ? "black" : "white"}} onClick={() => setActive("pending")}/>
+        <IconButton>
+          <PendingActionsIcon sx={{ fontSize: 45 }} style={{color: active === "pending" ? "black" : "white"}} onClick={() => setActive("pending")}/>
+        </IconButton>
         <p>0</p>
       </div>
       <div className="icon___container">
-        <AccountTreeIcon sx={{ fontSize: 40 }} style={{color: active === "account" ? "black" : "white"}} onClick={() => setActive("account")}/>
+        <IconButton>
+          <AccountTreeIcon sx={{ fontSize: 45 }} style={{color: active === "account" ? "black" : "white"}} onClick={() => setActive("account")}/>
+        </IconButton>
         <p>0</p>
       </div>
   </div>
